@@ -24,10 +24,10 @@ class LargeLanguageModelSchemaPrinter(SchemaPrinter, alias="genaillm"):
             rels[str(from_node)][str(rel_name)].append(str(to_node))
         return rels
 
-     def print_schema_to_string(self, schema: GraphSchema) -> str:
-            representation = str(self.return_nodes_props(schema))
-            representation += ". "
-            representation += str(self.return_rels_props(schema))
-            representation += ". "
-            representation += str(self.return_rels(schema))
-            return representation
+    def print_schema_to_string(self, schema: GraphSchema) -> str:
+        representation = str(self.return_nodes_props(schema))
+        representation += ". "
+        representation += str(self.return_rels_props(schema))
+        representation += ". "
+        representation += str(self.return_rels(schema))
+        return representation
